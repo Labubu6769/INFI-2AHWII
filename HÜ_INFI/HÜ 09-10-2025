@@ -1,0 +1,18 @@
+1HÜ:
+
+- wie viele customers sind aus berlin?
+- Zeige nur die CustomerName, City und Country von allen Kunden an.
+- Finde alle Kunden aus der Stadt London.
+- Zeige alle Produkte (Products), deren Preis (Price) größer als 20 ist.
+- Zeige alle Produkte, deren Preis nicht gleich 18 ist.
+
+
+1. select count(*) frp, costumers where city= 'Berlin';
+
+2. select CustomerName, City, country from customers;
+
+3. select CustomerName from custormers where city='London';
+
+4. select ProductName from products where Price>20;
+
+5. select ProductName from Products wherre PRice is 18;
