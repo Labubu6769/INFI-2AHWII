@@ -1,0 +1,46 @@
+erdiagram Bibliothek
+
+notation=crowsfoot
+
+entity Buch {
+    BuchID key
+    Titel
+    Autor
+    Verlag
+    ISBN
+}
+
+entity Exemplar {
+    ExemplarID key
+    BuchID
+    Standort
+    Status
+}
+
+entity Mitarbeiter {
+    MitarbeiterID key
+    Vorname
+    Nachname
+    Rolle
+}
+
+entity Ausleihe {
+    AusleiheID key
+    MitarbeiterID
+    ExemplarID
+    DatumVon
+    DatumBis
+    Typ
+}
+
+relationship hat {
+    Buch[1] -> Exemplar[1..N]
+}
+
+relationship fuehrt_durch {
+    Mitarbeiter[1] -> Ausleihe[0..N]
+}
+a
+relationship beinhaltet {
+    Exemplar[1] -> Ausleihe[0..N]
+}
